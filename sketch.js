@@ -14,7 +14,8 @@ var score = 0;
 
 function preload() {
     getBackgroundImg();
-}
+    bg1 = loadImage(bg);
+ }
 
 function setup(){
     var canvas = createCanvas(1200,400);
@@ -47,9 +48,11 @@ function setup(){
 }
 
 function draw(){
-    if(backgroundImg)
+    if(backgroundImg){
         background(backgroundImg);
-    
+    }else{
+        background(bg1);
+    }
         noStroke();
         textSize(35)
         fill("white")
